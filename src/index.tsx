@@ -50,8 +50,3 @@ const Indicator = ({ color }: IndicatorProps) => {
 
 export { UptimeStatus };
 export { Colors, Position, IndicatorProps, UptimeStatusProps } from './types';
-
-// features coming soon:
-// - user can dismiss the status message
-// - build basic website to display component
-// - add tests
