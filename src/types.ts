@@ -8,6 +8,8 @@ export type UptimeStatusProps = {
   url?: string;
   border?: boolean;
   position?: Position;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 export type IndicatorProps = {

@@ -3,7 +3,15 @@ import './styles.css';
 import { IndicatorProps, UptimeStatusProps } from './types';
 import { statusMap } from './constants';
 
-const UptimeStatus = ({ color, message, url, border = false, position = 'bottom-right' }: UptimeStatusProps) => {
+const UptimeStatus = ({
+  color,
+  message,
+  url,
+  className,
+  style,
+  border = false,
+  position = 'bottom-right',
+}: UptimeStatusProps) => {
   if (!color) {
     return null;
   }
@@ -11,7 +19,12 @@ const UptimeStatus = ({ color, message, url, border = false, position = 'bottom-
   const statusText = message || statusMap[color];
 
   const content = (
-    <div className={`si-status ${border ? 'si-border' : ''} si-${position}`} role="status" aria-live="polite">
+    <div
+      className={`si-status ${border ? 'si-border' : ''} si-${position} ${className}`}
+      style={style}
+      role="status"
+      aria-live="polite"
+    >
       <span>{statusText}</span>
       <Indicator color={color} />
       <span className="si-sr-only">{`Current status: ${statusText}`}</span>
@@ -41,5 +54,4 @@ export { Colors, Position, IndicatorProps, UptimeStatusProps } from './types';
 // features coming soon:
 // - user can dismiss the status message
 // - build basic website to display component
-// - dark mode compatibility
 // - add tests
