@@ -1,0 +1,151 @@
+/* status.css */
+
+.si-status-indicator {
+  /* colors */
+  --si-green: #22c55e;
+  --si-amber: #ffab00;
+  --si-red: #f44336;
+  --si-black: #213547;
+  --si-white: #fff;
+}
+
+.si-status-indicator .si-status-url {
+  color: var(--si-black);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.si-status-indicator .si-status-url:hover {
+  color: var(--si-black);
+}
+
+.si-status-indicator .si-status {
+  width: fit-content;
+  color: var(--si-black);
+  height: 30px;
+  position: fixed;
+  margin: 10px;
+  z-index: 999999;
+  background-color: var(--si-white);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px 1px;
+  padding: 2px 12px;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Helvetica Neue,
+    Arial,
+    Noto Sans,
+    sans-serif,
+    Apple Color Emoji,
+    Segoe UI Emoji,
+    Segoe UI Symbol,
+    Noto Color Emoji;
+  font-size: 12px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: normal;
+}
+
+.si-status-indicator .si-indicator {
+  width: 12px;
+  height: 12px;
+  margin-left: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.si-status-indicator .si-border {
+  border: 1px solid var(--si-green);
+}
+
+.si-status-indicator .si-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.si-status-indicator .si-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.si-status-indicator .si-top-right {
+  top: 0;
+  right: 0;
+}
+
+.si-status-indicator .si-top-left {
+  top: 0;
+  left: 0;
+}
+
+.si-status-indicator .si-top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.si-status-indicator .si-bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.si-status-indicator .si-indicator-yellow {
+  background-color: var(--si-amber);
+  box-shadow: 0 0 7px 2px rgba(255, 171, 0, 0.7);
+  animation: si-pulse-yellow 2.5s infinite;
+}
+
+.si-status-indicator .si-indicator-red {
+  background-color: var(--si-red);
+  box-shadow: 0 0 7px 2px rgba(244, 67, 54, 0.7);
+  animation: si-pulse-red 2.5s infinite;
+}
+
+.si-status-indicator .si-indicator-green {
+  background-color: var(--si-green);
+  box-shadow: 0 0 7px 2px rgba(70, 167, 88, 0.7);
+  animation: si-pulse-green 2.5s infinite;
+}
+
+@keyframes si-pulse-yellow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 171, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(255, 171, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 171, 0, 0);
+  }
+}
+
+@keyframes si-pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(244, 67, 54, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(244, 67, 54, 0);
+  }
+}
+
+@keyframes si-pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(70, 167, 88, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(70, 167, 88, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(70, 167, 88, 0);
+  }
+}
