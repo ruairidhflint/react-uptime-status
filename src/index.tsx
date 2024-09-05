@@ -3,6 +3,13 @@ import './styles.css';
 import { IndicatorProps, UptimeStatusProps } from './types';
 import { statusMap } from './constants';
 
+/**
+ * A component that displays the current uptime status with a colored indicator.
+ * It can be customized with different colors, messages, and positioning.
+ *
+ * @param props - The properties for the UptimeStatus component
+ * @returns A React component displaying the uptime status, or null if no color is provided
+ */
 const UptimeStatus = ({
   color,
   message,
