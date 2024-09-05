@@ -1,0 +1,51 @@
+{
+  "name": "react-uptime-status",
+  "version": "0.0.1",
+  "description": "An opinionated uptime status display for React.",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.tsx",
+    "dev": "tsup src/index.tsx --watch",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "react",
+    "status",
+    "uptime",
+    "monitoring"
+  ],
+  "author": "Rory Flint <https://roryflint.co.uk>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilkowalski/sonner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emilkowalski/sonner/issues"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.30.0",
+    "@types/node": "^18.11.13",
+    "@types/react": "^18.0.26",
+    "prettier": "^2.8.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^6.4.0",
+    "turbo": "1.6",
+    "typescript": "^4.8.4"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "packageManager": "pnpm@8.12.1"
+}
