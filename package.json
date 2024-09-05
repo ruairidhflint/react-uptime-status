@@ -1,6 +1,6 @@
 {
   "name": "react-uptime-status",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An opinionated uptime status display for React.",
   "exports": {
     "types": "./dist/index.d.ts",
